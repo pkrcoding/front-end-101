@@ -1,0 +1,19 @@
+{
+    "data":[
+        {
+            "id":1,
+            "name": "Mega Coder",
+            "age": 17
+        },
+        {
+            "id":2,
+            "name": "King Coder",
+            "age": 34
+        },
+        {
+            "id":3,
+            "name": "Guru Coder",
+            "age": 51
+        }
+    ]
+}
