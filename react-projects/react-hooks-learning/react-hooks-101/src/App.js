@@ -40,7 +40,6 @@ function App() {
         <Route path="/">
           <Button />
         </Route>
-
       </Switch>
     </div>
   </Router>
