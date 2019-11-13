@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+https://medium.com/@zayneabraham/how-to-create-a-react-app-with-ruby-on-rails-548366a90185
