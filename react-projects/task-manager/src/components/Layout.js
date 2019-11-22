@@ -1,14 +1,13 @@
 import React from 'react';
 import TaskList from './TaskList';
 import './layout.css';
-import JobList from './JobList';
+import Job from './Job';
 import Modal from './Modal';
-import { useMachine } from '@xstate/react';
+import { useMachine} from '@xstate/react';
 import stateMachine from '../machine/stateMachine';
 const Recipies = () => {
     const [current,send] = useMachine(stateMachine);
 
-    
     const selectRecipie = e => {
         send('RECIPIE_SELECTED', {data: e.target.value});
     }
@@ -31,7 +30,10 @@ const Recipies = () => {
                     </select>&nbsp;&nbsp;&nbsp;
                     <button className="button is-small" onClick={()=> send('SHOW_JOB_MODAL',{data:true})}>Add Job</button>
                 </div>
-                <JobList jobs = {current.context.layout_jobList}></JobList>
+                {
+                    current.context.layout_jobList.map(j=><Job selectJob={()=>send('SET_JOB',{data:j.id})} key={j.id} job={j}></Job>)
+                }
+                
                 {
                     current.context.layout_showAddJobModal?
                         <Modal showModalHandle={(v)=>{}}
@@ -42,11 +44,9 @@ const Recipies = () => {
                         :
                         ""
                 }   
-               
-                
             </div>
             <div className="column is-10">
-                 <TaskList tasks = {current.context.layout_taskList}></TaskList>
+               <TaskList tasks = {current.context.layout_taskList}></TaskList>
             </div> 
         </div>
         
