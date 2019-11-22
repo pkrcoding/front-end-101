@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 https://medium.com/@zayneabraham/how-to-create-a-react-app-with-ruby-on-rails-548366a90185
+https://dev.to/able/building-and-consuming-a-json-api-with-rails-and-react-42p6

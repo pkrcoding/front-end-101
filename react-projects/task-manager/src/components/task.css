@@ -1,0 +1,27 @@
+.box{
+    margin: 20px 20px;
+}
+.comment-column{
+    width: 80%;
+}
+.comment-column div{
+    text-align: left;
+}
+.completed-task{
+    border-top-width: 3px;
+    border-top-color: green;
+    border-top-style: solid;
+}
+.inprogress-task{
+    border-top-width: 3px;
+    border-top-color: orange;
+    border-top-style: solid;
+}
+.todo-task{
+    border-top-width: 3px;
+    border-top-color: grey;
+    border-top-style: solid;
+}
+.row{
+    padding: 10px;
+}
